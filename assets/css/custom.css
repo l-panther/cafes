@@ -1,0 +1,66 @@
+/* Logo */
+#logo {
+	width: 100px;
+}
+
+/* Navigation links */
+#navPanel li a { color: white; }
+
+/* Cafes */
+.cafe-container { 
+	padding: 20px !important; }
+
+#cafeList { 
+	background: url("../../images/main/menu.jpg") no-repeat;
+	background-size: cover;
+	background: #f9f6f1;
+}
+
+.cafe { 
+	padding: 20px 20px 50px 20px !important;
+}
+
+.cafe h3 { 
+	font-weight: bold;
+	margin: 0px;
+	font-size: 1.3em;
+	border-bottom: 1px solid lightgrey; 
+	margin-bottom: 20px; }
+
+.cafe h4 { 
+	text-align: left; 
+	padding-left: 20px;
+	font-size: 1em; }
+
+.cafe .cafeImage { 
+	margin-top: 10px; }
+
+.cafe .rating { 
+	color: gold;
+	text-align: left;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	font-size: 15px; }
+
+.cafe .grey { color: lightgrey; }
+
+.features i { padding-right: 8px; }
+
+.cafe .features { 
+	text-align: left !important;
+	color: #adadad; }
+
+.cafe .features li { 
+	list-style: none;
+	font-size: 1em; }
+
+#cafeCarousel ol li { 
+	border: 1px solid #adadad; }
+
+#cafeCarousel li:hover { 
+	cursor: pointer; }
+
+.carousel-indicators .active { 
+	background: #a60000 !important; }
+
+/* Footer */

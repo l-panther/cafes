@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1, 
+		"name": "Hard Rock Cafe", 
+		"goldstars": "4",
+		"greystars": "1",
+		"ratings": "102 ratings",
+		"image": "hardrock", 
+		"address": "150 Old Park",
+		"type": "Meat & Vegetarian",
+		"features": [{"item":"Fresh ingredients"}, {"item":"American Style"}],
+		"description": "The Hard Rock Cafe is located on Old Park Lane since 1941, where it was the first cafe where the classes mingled. The food has <i>American</i> favorites like the classic burgers and salads made from the <i>freshiest</i> ingredients."
+	},
+	{
+		"id": 2, 
+		"name": "Gallery Cafe", 
+		"goldstars": "4",
+		"greystars": "1",
+		"ratings": "4 ratings",
+		"image": "gallery", 
+		"address": "21 Old Ford Rd",
+		"type": "Vegetarian",
+		"features": [{"item":"Long History"}, {"item":"Live Events"}],
+		"description": "The Gallery Cafe has a long history which dates back to 1888. This history lead to the full purchase of numbers 15 and 17 Old Ford Road in 1999. A <i>vegan</i> and <i>vegetarian</i> menu, exhibitions and live events every month."
+	},
+	{
+		"id":3, 
+		"name": "Regency Cafe", 
+		"goldstars": "3",
+		"greystars": "2",
+		"ratings": "17 ratings",
+		"image": "regency", 
+		"address": "17-19 Regency St",
+		"type": "Meat",
+		"features": [{"item":"Art Deco"}, {"item":"Voted 5th"}],
+		"description": "The Regency Cafe first opened it's doors in 1946 on Regency Street. This <i>popular</i> cafe has previously been voted the <i>fifth</i> best place to eat in London on Yelp in 2013. The cafe design is an art deco style."
+	},
+	{
+		"id":4, 
+		"name": "Table Cafe", 
+		"goldstars": "4",
+		"greystars": "1",
+		"ratings": "43 ratings",
+		"image": "table", 
+		"address":"150 Old Park Lan",
+		"type": "Vegetarian",
+		"features": [{"item":"Quality Ingredients"}, {"item":"Charity Work"}],
+		"description": "The Table Cafe is located in Southwark and is said to be one of South Bank hidden gems. It has a ground breaking record for the homeless charity St Mungo's. The Table Cafe is commited to sourcing <i>quality</i> ingredients."
+	}
+]
