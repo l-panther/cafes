@@ -7,13 +7,11 @@
 <html lang="en-US">
 	
 <?php
-	require_once("includes/config.php");
-	include 'includes/head.php';
+    require_once("includes/config.php");
+    require_once("includes/head.php");
 ?>
 
-	<body class="is-preload">
-
-		
+	<body class="is-preload">	
 		<!-- Wrapper -->
 		<div id="wrapper" class="fade-in">
 
@@ -29,24 +27,22 @@
 
 			<!-- Header -->
 			<header id="header">
-				<div class="logo">Great Food</div>
+				<div class="logo"><img src="images/logo/logo.png" alt="Company logo"></div>
 			</header>
 
 			<!-- Nav -->
 			<nav id="nav">
 				<ul class="links">
 					
-					<li class="active"><a href="#index">Home</a></li>
-					<li><a href="#cafes">Cafes</a></li>
+					<li class="active"><a href="#cafes">Cafes</a></li>
 					<li><a href="#map">Map</a></li>
 				</ul>
 				<?php include 'includes/icons.html'; ?>
 			</nav>
 
-			<?php include 'includes/index.php'; ?>
+			<?php include 'includes/index.html'; ?>
 			<?php include 'includes/footer.php'; ?>
 		</div>
-
 		<?php include 'includes/scripts.html'; ?>
 	</body>
 </html>

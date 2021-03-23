@@ -128,11 +128,10 @@ $(document).ready(function() {
 			@dots id of the html element
 		*/
 		$.get(
-			"data/cafes.json", 
+			"data/cafes.json",
 			function(result) {
 				
-				var output = "",
-				dot = "<span class='w3-badge slideDemo w3-border w3-hover-white'></span>"; // Set variable to empty string
+				var output = ""; // Set variable
 				for (var i = 0; i < result.length; i++) { // For length of result
 					var link = "";
 					if(result[i].id == 1) {
@@ -142,6 +141,17 @@ $(document).ready(function() {
 					}	
 
 					output += "<h3>" + result[i].name + "</h3>";
+					output += "<div class='w3-center rating'>";
+
+					for (var j = 0; j < result[i].goldstars; j++) {
+						output += "<i class='fa fa-star'></i>";
+					}
+					for (var k = 0; k < result[i].greystars; k++) {
+						output += "<i class='fa fa-star grey'></i>";
+					}
+					output += "<span class='w3-margin-left w3-text-blue'>" + result[i].ratings + "</span>";
+					output += "</div>";
+					
 
 					// output += "<p>" + cafes[i].description + "</p>";
 
@@ -153,18 +163,8 @@ $(document).ready(function() {
 					output += "</div> <!-- End image column -->";
 					output += "<!-- Travel column -->";
 					output += "<div class='w3-col s12 m7 l7'>";
-
 					output += "<a href='#map' title='View in map'><h4><i class='material-icons w3-padding-right w3-text-grey'>location_on</i>" + result[i].address + "</h4></a>";
-					output += "<div class='rating'>";
-
-					for (var j = 0; j < result[i].goldstars; j++) {
-						output += "<i class='fa fa-star'></i>";
-					}
-					for (var k = 0; k < result[i].greystars; k++) {
-						output += "<i class='fa fa-star grey'></i>";
-					}
-					output += "<span class='w3-margin-left w3-text-blue'>" + result[i].ratings + "</span>";
-					output += "</div>";
+					
 					output += "<ul class='w3-container features'>";
 					output += "<li>";
 					output += "<i class='fa fa-check'></i>";
@@ -178,7 +178,7 @@ $(document).ready(function() {
 					}
 
 					output += "</div><!-- End travel column --></div></div><!-- End row -->";
-					output += "</div>";
+					output += "</div><!-- End carousel item -->";
 					
 					
 					for(var q = 0; q < result.length; q++) {
@@ -190,7 +190,6 @@ $(document).ready(function() {
 						   link += "<li data-target='#cafeCarousel' data-slide-to='" + i  + "'></li>";
 						}	
 					}
-				
 				}
 	
 				$("#indicators").html(link); // Insert content to element and refresh listview
