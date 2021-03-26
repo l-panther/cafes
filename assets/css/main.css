@@ -36,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 html { scroll-behavior: smooth; }
+
 body {
 	line-height: 1;
 }
@@ -3217,7 +3218,7 @@ mark {
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-family: "Potta One" !important;
 			font-weight: 900;
-			letter-spacing: 1em;
+			letter-spacing: 0.5em;
 			list-style: none;
 			margin-bottom: 0;
 			padding-left: 0;
