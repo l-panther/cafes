@@ -1,7 +1,7 @@
 /* -------------------------------- IMPORT FONTS-------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 @import url("https://fonts.googleapis.com/css?family=Carter One:300,400,500,600");
-@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great:300,400,500,600");
+@import url("https://fonts.googleapis.com/css?family=Yeseva+One:300,400,500,600");
 /* -------------------------------- IMPORT FILES-------------------------------- */
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
@@ -39,6 +39,7 @@ html { scroll-behavior: smooth; }
 
 body {
 	line-height: 1;
+	letter-spacing: 0.6px;
 }
 
 ol, ul {
@@ -179,25 +180,17 @@ mark {
 		margin: 0 0 2rem 0;
 	}
 
-	h1 {
+	h1, h2 {
 		font-family: "Carter One", Helvetica, sans-serif !important;
-		font-family: "Fredericka the Great", Helvetica, sans-serif !important;
+		font-family: "Yeseva One", Helvetica, sans-serif !important;
 		line-height: 1.5;
-		letter-spacing: 0.075em;
 		text-transform: uppercase;
 		margin: 0 0 1rem 0;
 	}
 
 	h2 {
-		font-family: "Source Sans Pro", Helvetica, sans-serif !important;
-		font-family: "Potta One", Helvetica, sans-serif !important;
-		font-family: "Fredericka the Great", Helvetica, sans-serif !important;
-		
 		font-weight: 900;
-		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: uppercase;
-		margin: 0 0 1rem 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2831,8 +2824,10 @@ mark {
 		#intro a {
 			color: #ffffff;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
-			padding: 10px;
+			padding: 10px 15px;
 			border-radius: 100%;
+			width: 40px;
+			height: 40px;
 		}
 
 			#intro a:hover {
@@ -3135,8 +3130,6 @@ mark {
 		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 		transition: transform 1s ease, opacity 1s ease;
-		background: rgba(255, 255, 255, 0.175);
-		background: #003971;
 		background: #ae0404;
 		height: 2.5rem;
 		line-height: 2.5rem;
@@ -3154,8 +3147,7 @@ mark {
 		}
 
 		#nav ul.icons li a.icon:hover:before {
-			color: #18bfef;
-			color: #a60000;
+			color: #3f3f3f;
 		}
 
 		#nav ul.icons.alt li .icon:before {
@@ -3177,8 +3169,7 @@ mark {
 
 			#nav a:hover {
 				border-bottom-color: transparent;
-				color: #18bfef !important;
-				color: #a60000 !important;
+				color: #3f3f3f !important;
 			}
 
 		#nav strong, #nav b {
@@ -3242,7 +3233,7 @@ mark {
 				}
 
 					#nav ul.links li a:hover {
-						color: inherit !important;
+						color: #3f3f3f !important;
 						background-color: rgba(255, 255, 255, 0.1);
 					}
 
@@ -3255,8 +3246,7 @@ mark {
 					}
 
 						#nav ul.links li.active a:hover {
-							color: #18bfef !important;
-							color: #a60000 !important;
+							color: #3f3f3f !important;
 						}
 
 		#nav ul.icons {
@@ -3305,7 +3295,7 @@ mark {
 		}
 
 		#main > .post {
-			padding: 4rem 6rem 3rem 6rem ;
+			padding: 4rem 6rem 4rem 6rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3349,7 +3339,7 @@ mark {
 			@media screen and (max-width: 1280px) {
 
 				#main > .post {
-					padding: 4rem 4rem 2rem 4rem ;
+					padding: 4rem 4rem 4rem 4rem ;
 				}
 
 			}
@@ -4190,7 +4180,6 @@ mark {
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
 			width: 7rem;
 		}
 
@@ -4261,7 +4250,7 @@ mark {
 
 	@media screen and (min-width: 300px) {
 
-		body { font-size: 16px !important; }
+		body { font-size: 16px; }
 		
 		#cafeCarousel .carousel-control {
 			position: relative;
@@ -4275,8 +4264,6 @@ mark {
 
 	@media only screen and (min-width: 600px) {
 
-		body { font-size: 18px !important; }
-		
 		.logo {
 			width: 200px !important;
 		}
@@ -4286,18 +4273,23 @@ mark {
 			margin-top: -210px !important;
 		}
 		
-		.cafe h4, .rating, .features { 
-			padding-left: 20px !important; }
-		
+		.cafe { padding: 50px 20px 50px 20px !important; }
+
+		.cafe .cafeImage { width: 100%; }
+	
 		#map-container, #map-canvas {
 			width: 100%;
 			height: 500px;
 		}
 	}
 		
-	@media only screen and (min-width: 991px) {
+	@media only screen and (min-width: 800px) {
 
-		html { font-size: 20px !important; }
+		.cafe { padding: 50px 0px 50px !important; }
+
+	}
+		
+	@media only screen and (min-width: 991px) {
 		
 		/* Logo */
 		.logo {
@@ -4305,6 +4297,8 @@ mark {
 		}
 		
 		#cafes p { padding-right: 30px; }
+
+		.cafe .cafeImage { width: 100%; }
 		
 		#map-container, #map-canvas {
 			width: 100%;

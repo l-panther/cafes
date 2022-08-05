@@ -1,8 +1,14 @@
+/* ===============================
+	Import 
+===============================*/
 @import url(fontawesome-all.min.css);/*
 	Custom CSS for cafe
 	Last updated 2021 by Leroy Russell
 */
 
+/* ===============================
+	Main stying 
+===============================*/
 /* Logo */
 .logo {
 	width: 160px;
@@ -15,19 +21,17 @@
 	padding: 0px !important;
 }
 
+/* Cafes */
 #cafes {
 	background: #fff;
 	color: #3f3f3f;
 }
 
-/* Cafes */
 #cafeList { 
-	background: #f9f6f1;
-}
+	border-radius: 10px;
+	background: #f6f6f6; }
 
-.cafe { 
-	padding: 20px 20px 50px 20px;
-}
+.cafe { padding: 30px 50px 50px 50px; }
 
 .cafe h3 { 
 	font-weight: bold;
@@ -40,8 +44,9 @@
 	font-size: 1em; }
 
 .cafe .cafeImage { 
-	margin-top: 10px;
-	z-index: 0 !important; }
+	width: 80%;
+	margin: 20px 0px;
+}
 
 .cafe .rating { 
 	color: gold;
@@ -52,9 +57,21 @@
 
 .cafe .grey { color: lightgrey; }
 
+.cafe .location-icon { 
+	padding: 0px;
+	margin-bottom: -20px !important;
+}
+
 .features { padding: 0px; }
 
-.features i { padding-right: 8px; }
+.features i { 
+	padding-right: 8px;
+	color: #adadad; 
+}
+
+.features:first-child { 
+	margin-left: 8px !important;
+}
 
 .cafe .features { 
 	text-align: left !important;
@@ -65,16 +82,14 @@
 	font-size: 1em; }
 
 #cafeCarousel ol li { 
-	border: 1px solid #adadad; }
-
-#cafeCarousel li:hover { 
-	cursor: pointer; }
+	padding: 3px;
+	border: 1px solid #eee; }
 
 .carousel-indicators .active { 
 	background: #a60000 !important; }
 
 #cafeCarousel .carousel-control i {
-	color: #3f3f3f;
+	color: #a60000;
 	font-size: 40px;
 }
 
@@ -91,14 +106,15 @@
 	color: #a60000;
 }
 
+/* Map */
 #map { background: #141414; }
 
 #map h2 {
 	color: #fff
 }
 
+/* Footer */
 #footer {
 	background: #141414;
 	color: #fff !important;
 }
-
