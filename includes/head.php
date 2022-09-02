@@ -1,8 +1,8 @@
 	<head>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Reponsive -->
-		<meta name="description" content="Review of cafes in London" />
-		<meta name="keywords" content="Cafes,London, Eating in london, Food in London" />
+		<meta name="description" content="A website for suggested places to eat in London. This website has maniuplate from an existing template and contains data from various sources of the internet. I do not own of the pictures used on this site." />
+		<meta name="keywords" content="Cafes,London, Cafes in London, Eating in london, Meals in London, Food in London, Meal, Eat, Hungry, Food, Bite, Lunch" />
 		<meta name="author" content="Leroy Russell" />
 		<link rel="icon" href="images/logo/logo.ico"> <!-- Icon -->
         <title><?php echo $COMPANY_NAME ?></title>

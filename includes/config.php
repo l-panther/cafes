@@ -1,13 +1,18 @@
 <?php
 
+// Company name
 $COMPANY_NAME = "Cafes in London";
-
+// Host name
 $HOST_NAME = "";
+// Server name
 $SERVER_NAME = "";
+// Username
 $USERNAME = "";
+// Password
 $PASSWORD = "";
-
+// Server port
 $SERVER_PORT = "";
+// Database name 
 $DB_NAME = "";
 
 
