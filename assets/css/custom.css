@@ -29,7 +29,9 @@
 
 #cafeList { 
 	border-radius: 10px;
-	background: #f6f6f6; }
+	background: #f6f6f6; } 
+
+#cafeCarousel { box-shadow: 1px 1px 10px 0px rgb(195, 195, 195); }
 
 .cafe { padding: 30px 50px 50px 50px; }
 
@@ -83,7 +85,7 @@
 
 #cafeCarousel ol li { 
 	padding: 3px;
-	border: 1px solid #eee; }
+	border: 1px solid rgb(229, 229, 229); }
 
 .carousel-indicators .active { 
 	background: #a60000 !important; }
