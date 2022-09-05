@@ -1,15 +1,15 @@
-$(document).ready(function() {
-	
+$(document).ready(function () {
+
 	// getSlide("#cafeList"); // Get slideshow w3.css
 	// getCard("#cafeList"); // Get card w3.css
 	getCarousel("#cafeList"); // Get carousel bootstrap
-	
+
 	/* 
 		========================================================
 								FUNCTIONS
 		========================================================
 	*/
-			
+
 	// ============================ Card ============================
 	function getCard(elemId) {
 		/* 
@@ -18,11 +18,11 @@ $(document).ready(function() {
 			@dots id of the html element
 		*/
 		$.get(
-			"data/cafes.json", 
-			function(result) {
-				
+			"data/cafes.json",
+			function (result) {
+
 				var output = "",
-				dot = "<span class='w3-badge slideDemo w3-border w3-hover-white'></span>"; // Set variable to empty string
+					dot = "<span class='w3-badge slideDemo w3-border w3-hover-white'></span>"; // Set variable to empty string
 				for (var i = 0; i < result.length; i++) { // For length of result
 					output += "<!-- Slide 1 -->";
 					output += "<div class='w3-col s12 m6 l6 cafe-container'>";
@@ -51,17 +51,17 @@ $(document).ready(function() {
 					output += "</article>";
 					output += "</div>";
 					output += "</div>";
-				
+
 				}
-	
+
 				$(elemId).html(output); // Insert content to element and refresh listview
-			}, 
+			},
 			"json"
 		);
 		$(cafeList).html(output); // Insert content to element and refresh listview
 	}
-		
-	
+
+
 	// ============================ Slideshow ============================
 	function getSlide(elemId, dots) {
 		/* 
@@ -71,7 +71,7 @@ $(document).ready(function() {
 		*/
 		var output = "",
 			dot = "<span class='w3-badge slideDemo w3-border w3-hover-white'></span>"; // Set variable to empty string
-			
+
 		for (var i = 0; i < cafes.length; i++) { // For length of result
 
 			output += "<!-- Slide 1 -->";
@@ -79,7 +79,7 @@ $(document).ready(function() {
 			output += "<article class='cafe'><!-- Article -->";
 			output += "<h2>" + cafes[i].name + "</h2>";
 			output += "<div class='w3-center w3-margin-bottom rating'>";
-			
+
 			for (var j = 0; j < cafes[i].goldstars; j++) {
 				output += "<i class='fa fa-star'></i>";
 			}
@@ -116,10 +116,10 @@ $(document).ready(function() {
 		}
 		$(dots).html(dot.repeat(cafes.length)); // Insert content to element and refresh listview
 		$(cafeList).html(output); // Insert content to element and refresh listview
-		
+
 	}
-	
-	
+
+
 	// ============================ Carousel ============================
 	function getCarousel(elemId) {
 		/*
@@ -129,17 +129,18 @@ $(document).ready(function() {
 		*/
 		$.get(
 			"data/cafes.json",
-			function(result) {
-				
+			function (result) {
+
 				var output = ""; // Set variable
 				for (var i = 0; i < result.length; i++) { // For length of result
 					var link = "";
-					if(result[i].id == 1) {
-					   output += "<div class='carousel-item active cafe'>";
+					if (result[i].id == 1) {
+						output += "<div class='carousel-item active cafe'>";
 					} else {
 						output += "<div class='carousel-item cafe'>";
-					}	
+					}
 
+					output += "<div class='w3-hide-medium w3-hide-large'>";
 					output += "<h3>" + result[i].name + "</h3>";
 					output += "<div class='w3-center rating'>";
 
@@ -151,52 +152,68 @@ $(document).ready(function() {
 					}
 					output += "<span class='w3-margin-left w3-text-blue'>" + result[i].ratings + "</span>";
 					output += "</div>";
-					
+					output += "</div>";
 
 					// output += "<p>" + cafes[i].description + "</p>";
 
 					output += "<!-- Row -->";
 					output += "<div class='w3-row'>";
 					output += "<!-- Image column -->";
-					output += "<div class='w3-col s12 m5 l5'>"
+					output += "<div class='w3-col s12 m5 l6'>"
 					output += "<img src='images/main/" + result[i].image + ".png' alt='Food served by cafe' class='cafeImage'/>";
 					output += "</div> <!-- End image column -->";
 					output += "<!-- Travel column -->";
-					output += "<div class='w3-col s12 m7 l7'>";
-					output += "<a href='#map' title='View in map'><h4><i class='material-icons w3-padding-right w3-text-grey'>location_on</i>" + result[i].address + "</h4></a>";
-					
+					output += "<div class='w3-col s12 m7 l6'>";
+					output += "<div class='w3-hide-small w3-left-align'>";
+					output += "<h3>" + result[i].name + "</h3>";
+					output += "<div class='rating'>";
+
+					for (var j = 0; j < result[i].goldstars; j++) {
+						output += "<i class='fa fa-star'></i>";
+					}
+					for (var k = 0; k < result[i].greystars; k++) {
+						output += "<i class='fa fa-star grey'></i>";
+					}
+					output += "<span class='w3-margin-left w3-text-blue'>" + result[i].ratings + "</span>";
+					output += "</div>";
+					output += "</div>";
 					output += "<ul class='w3-container features'>";
 					output += "<li>";
-					output += "<i class='fa fa-check'></i>";
+					output += "<i class='fa fa-map-marker'></i> ";
+					output += result[i].address;
+					output += "</li>";
+					output += "<li>";
+					output += "<i class='fa fa-coffee'></i>";
 					output += result[i].type;
 					output += "</li>";
-					for(var l = 0; l < result[i].features.length; l++) {
+					for (var l = 0; l < result[i].features.length; l++) {
 						output += "<li>";
-						output += "<i class='fa fa-check'></i>";
+						output += "<i class='fa fa-medal'></i>";
 						output += result[i].features[l].item;
 						output += "</li>";
 					}
+					output += "</ul>";
 
 					output += "</div><!-- End travel column --></div></div><!-- End row -->";
 					output += "</div><!-- End carousel item -->";
-					
-					
-					for(var q = 0; q < result.length; q++) {
-						
-						if(result[q].id == 1) {
-						   link += "<li data-target='#cafeCarousel' data-slide-to='" + i + "' class='active'></li>";	
+
+
+					for (var q = 0; q < result.length; q++) {
+
+						if (result[q].id == 1) {
+							link += "<li data-target='#cafeCarousel' data-slide-to='" + i + "' class='active'></li>";
 						} else {
-						
-						   link += "<li data-target='#cafeCarousel' data-slide-to='" + i  + "'></li>";
-						}	
+
+							link += "<li data-target='#cafeCarousel' data-slide-to='" + i + "'></li>";
+						}
 					}
 				}
-	
+
 				$("#indicators").html(link); // Insert content to element and refresh listview
 				$(elemId).html(output); // Insert content to element and refresh listview
-			}, 
+			},
 			"json"
 		);
 	}
-	
+
 });
